@@ -1,0 +1,21 @@
+{
+  "name": "elm-boiler-plate",
+  "version": "1.0.0",
+  "description": "a boiler plate for elm projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "elm-live src/Main.elm --output=public/elm.js --dir=public --open --debug --pushstate",
+    "build": "elm-make src/Main.elm --output=public/elm.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jwhiles/elm-boiler-plate.git"
+  },
+  "author": "John Whiles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jwhiles/elm-boiler-plate/issues"
+  },
+  "homepage": "https://github.com/Jwhiles/elm-boiler-plate#readme"
+}
