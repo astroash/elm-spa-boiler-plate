@@ -26,6 +26,7 @@ repoDecoder =
         |> required "name" string
         |> optional "description" string "no description found"
         |> required "stargazers_count" int
+        |> required "html_url" string
 
 
 reposDecoder : Decoder (List Repo)

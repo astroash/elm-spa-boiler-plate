@@ -55,7 +55,7 @@ view model =
         , input [ onInput UpdateUser ] []
         , button [ onClick GetRepos ] [ text "get the repos" ]
         , div
-            [ class "center" ]
+            [ class "" ]
           <|
             List.map repoView model.repos
         ]
@@ -63,10 +63,13 @@ view model =
 
 repoView : Repo -> Html msg
 repoView repo =
-    div [ class "fl w-100 w-third-ns pa2" ]
-        [ div [ class "outline bg-pink grow pa2" ]
-            [ p [] [ text repo.name ]
-            , p [] [ text repo.description ]
-            , p [] [ text <| toString repo.stars ]
+    div [ class "w-100 fl align-center w-third-ns pa2" ]
+        [ div [ class "outline w-100 bg-pink grow pa2" ]
+            [ a
+                [ href repo.url ]
+                [ p [] [ text repo.name ]
+                , p [] [ text repo.description ]
+                , p [] [ text <| toString repo.stars ]
+                ]
             ]
         ]

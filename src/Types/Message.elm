@@ -7,6 +7,7 @@ type alias Repo =
     { name : String
     , description : String
     , stars : Int
+    , url : String
     }
 
 
