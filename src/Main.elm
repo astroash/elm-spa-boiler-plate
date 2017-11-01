@@ -1,51 +1,44 @@
 module Main exposing (..)
 
-import Html exposing (..)
-import Html.Attributes exposing (..)
-import Html.Events exposing (..)
+import Navigation
+
+
+-- My Elm Files
+
+import Types exposing (..)
+import Router exposing (..)
 
 
 main : Program Never Model Msg
 main =
-    Html.beginnerProgram { model = model, view = view, update = update }
+    Navigation.program UrlChange
+        { init = (\_ -> ( model, Cmd.none ))
+        , view = view
+        , update = update
+        , subscriptions = (\_ -> Sub.none)
+        }
 
 
 
 -- MODEL
 
 
-type alias Model =
-    { userInput : String }
-
-
 model : Model
 model =
-    { userInput = "" }
+    { route = HomeRoute
+    , userInput = ""
+    }
 
 
 
 -- UPDATE
 
 
-type Msg
-    = Change String
-
-
-update : Msg -> Model -> Model
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Change newInput ->
-            { model | userInput = newInput }
+            ( { model | userInput = newInput }, Cmd.none )
 
-
-
--- VIEW
-
-
-view : Model -> Html Msg
-view model =
-    div [ class "w-60-ns center" ]
-        [ h1 [ class "tc f1" ] [ text "hello" ]
-        , p [ class "f3 w60 mh1 tc" ] [ text "Welcome to this elm boiler plate. Tachyons is included. Go nuts." ]
-        , input [ class "f3 w30 pa1 center db ba", onInput Change, value model.userInput ] []
-        ]
+        UrlChange location ->
+            { model | route = (getPage location.hash) } ! [ Cmd.none ]
