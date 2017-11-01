@@ -1,4 +1,4 @@
-# elm-boiler-plate
+# elm-spa-boiler-plate
 A SPA boiler plate for elm projects
 
 ## Structure
