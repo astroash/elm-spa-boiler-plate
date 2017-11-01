@@ -5,6 +5,7 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 
 
+main : Program Never Model Msg
 main =
     Html.beginnerProgram { model = model, view = view, update = update }
 
@@ -45,6 +46,6 @@ view : Model -> Html Msg
 view model =
     div [ class "w-60-ns center" ]
         [ h1 [ class "tc f1" ] [ text "hello" ]
-        , p [ class "f3 w60 mh1" ] [ text "welcome to this elm boiler plate. Tachyons is included. Go nuts" ]
-        , input [ onInput Change, value model.userInput ] []
+        , p [ class "f3 w60 mh1 tc" ] [ text "Welcome to this elm boiler plate. Tachyons is included. Go nuts." ]
+        , input [ class "f3 w30 pa1 center db ba", onInput Change, value model.userInput ] []
         ]
