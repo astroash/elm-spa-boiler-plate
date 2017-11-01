@@ -12,3 +12,6 @@ public/ -- contain built code, and an index.html file
 server`
 
 `npm run build -- will build your elm project as a js file, ready to serve as a static site`
+
+## Multiplicity
+To duplicate this repo for your own use follow [these gitHub instructions](https://help.github.com/articles/duplicating-a-repository/)
