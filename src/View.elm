@@ -1,4 +1,4 @@
-module Router exposing (..)
+module View exposing (..)
 
 import Html exposing (..)
 
@@ -10,29 +10,6 @@ import Routes.Home exposing (..)
 import Routes.PageOne exposing (..)
 import Routes.PageTwo exposing (..)
 import Routes.Navbar exposing (..)
-
-
---UPDATE
-
-
-getPage : String -> Route
-getPage hash =
-    case hash of
-        "#home" ->
-            HomeRoute
-
-        "#pageone" ->
-            PageOneRoute
-
-        "#pagetwo" ->
-            PageTwoRoute
-
-        _ ->
-            HomeRoute
-
-
-
--- VIEW
 
 
 view : Model -> Html Msg
