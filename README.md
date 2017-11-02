@@ -1,6 +1,13 @@
 # elm-spa-boiler-plate
 A SPA boiler plate for elm projects
 
+## Stack
+Welcome to the ET Stack
+![](https://media.giphy.com/media/gHcPh3ehbRGik/giphy.gif)
+
+**E**lm - for sweet :sweet: functional code
+**T**achyons - for speedy modular styling
+
 ## Structure
 ``` elm
 src/ -- contains elm code
