@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jwhiles/elm-boiler-plate.git"
+    "url": "git+https://github.com/astroash/elm-spa-boiler-plate.git"
   },
-  "author": "John Whiles",
+  "author": "John Whiles && Astro Ash",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Jwhiles/elm-boiler-plate/issues"
+    "url": "https://github.com/astroash/elm-spa-boiler-plate/issues"
   },
-  "homepage": "https://github.com/Jwhiles/elm-boiler-plate#readme",
+  "homepage": "https://github.com/astroash/elm-spa-boiler-plate#readme",
   "devDependencies": {
     "elm-live": "^2.7.5"
   }
