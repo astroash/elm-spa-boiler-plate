@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "summary": "an elm boilerplate",
-    "repository": "https://github.com/Jwhiles/elm-boiler-plate.git",
+    "repository": "https://github.com/astroash/elm-spa-boiler-plate.git",
     "license": "BSD3",
     "source-directories": [
         "src"
