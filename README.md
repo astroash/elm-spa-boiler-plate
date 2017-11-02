@@ -2,16 +2,16 @@
 A SPA boiler plate for elm projects
 
 ## Stack
-Welcome to the ET Stack  
+##### Welcome to the ET Stack  
 ![](https://media.giphy.com/media/gHcPh3ehbRGik/giphy.gif)
 
-**E**lm - for sweet :sweet: functional code  
+**E**lm - for sweet :candy: functional code  
 **T**achyons - for speedy modular styling
 
 ## Structure
 ``` elm
 src/ -- contains elm code
-src/Routes -- contains Html Msgs for your pages && elements
+src/Routes/ -- contains Html Msgs for your pages && elements
 public/ -- contains built code, and an index.html file
 ```
 
