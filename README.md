@@ -22,16 +22,16 @@ server`
 `npm run build -- will build your elm project as a js file, ready to serve as a static site`
 
 ## Routing
-Routing is done via a #url to avoid reloading the page and loosing model's state. There are workarounds for this, but this a simple solution that requires minimal code (check resources below for alternatives). The router works by using the `Navigation` package which gives us access to the url. Our app checks the current url address, adds this route to the `modal`, then renders the page accoring to the `state.route`.
+Routing is done via a #url to avoid reloading the page and loosing model's state. There are workarounds for this, but this a simple solution that requires minimal code (_check resources below for alternatives_). The router works by using the `Navigation` package which gives us access to the url. Our app checks the current url address, updates this route in the `modal`, then renders the page accoring to the `modal.route`.
 
 All routing takes place in the ```Router.elm``` file:
 - ```getPage``` acts as a virtual router, which gets the current url and sets it in model
 - the ```case``` statement in ```view``` acts as a handler which serves the correct ```Html Msg```
 
 To add a new route you need to:
-1. Create and export a ```Html Msg``` for your new page and place it in a separate file in ```Routes/```
-2. Add a ```case``` for your route in ```getPage```
-3. Serve your file by adding a ```case``` for your imported```Html Msg``` in your ```view ```
+1. Create and export a ```Html Msg``` for the new page and place it in a separate file in ```Routes/```
+2. Add a ```case``` for the route in ```getPage```
+3. Serve the file by adding a ```case``` for the imported```Html Msg``` in ```view ```
 
 ## Multiplicity
 To duplicate this repo for your own use follow [these gitHub instructions](https://help.github.com/articles/duplicating-a-repository/)
