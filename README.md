@@ -6,7 +6,7 @@ A SPA boiler plate for elm projects
 ![](https://media.giphy.com/media/gHcPh3ehbRGik/giphy.gif)
 
 **E**lm - for sweet :candy: functional code  
-**T**achyons - for speedy modular styling
+**T**achyons - for speedy :dash: modular styling
 
 ## Structure
 ``` elm
@@ -22,14 +22,14 @@ server`
 `npm run build -- will build your elm project as a js file, ready to serve as a static site`
 
 ## Routing
-Routing is done via a #url to avoid reloading the page and loosing model's state. There are workarounds for this, but this is the most simple solution (check resources below for alternatives).
+Routing is done via a #url to avoid reloading the page and loosing model's state. There are workarounds for this, but this a simple solution that requires minimal code (check resources below for alternatives). The router works by using the `Navigation` package which gives us access to the url. Our app checks the current url address, adds this route to the `modal`, then renders the page accoring to the `state.route`.
 
 All routing takes place in the ```Router.elm``` file:
 - ```getPage``` acts as a virtual router, which gets the current url and sets it in model
 - the ```case``` statement in ```view``` acts as a handler which serves the correct ```Html Msg```
 
 To add a new route you need to:
-1. Create and export a ```Html Msg``` to go on your page and place it in a separate file in ```Routes/```
+1. Create and export a ```Html Msg``` for your new page and place it in a separate file in ```Routes/```
 2. Add a ```case``` for your route in ```getPage```
 3. Serve your file by adding a ```case``` for your imported```Html Msg``` in your ```view ```
 
