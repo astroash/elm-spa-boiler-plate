@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Jwhiles/elm-boiler-plate/issues"
   },
-  "homepage": "https://github.com/Jwhiles/elm-boiler-plate#readme"
+  "homepage": "https://github.com/Jwhiles/elm-boiler-plate#readme",
+  "devDependencies": {
+    "elm-live": "^2.7.5"
+  }
 }
