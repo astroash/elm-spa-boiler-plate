@@ -34,7 +34,7 @@ To add a new route you need to:
 3. Serve the file by adding a ```case``` for the imported```Html Msg``` in ```view ```
 
 ## Multiplicity
-To duplicate this repo for your own use follow [these gitHub instructions](https://help.github.com/articles/duplicating-a-repository/)
+To duplicate this repo for your own use follow [these gitHub instructions](https://help.github.com/articles/duplicating-a-repository/). And don't forget to :star: :star2: :star: to say thanks!
 
 ## Resources
 This is a basic way of routing a SPA using [this tutorial](https://medium.com/@nithstong/spa-simple-with-elm-navigation-630bdfdbef94)
