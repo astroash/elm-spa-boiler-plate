@@ -5,8 +5,7 @@ import Navigation
 
 -- My Elm Files
 
-import Model exposing (..)
-import Update exposing (..)
+import State exposing (..)
 import View exposing (..)
 import Types exposing (..)
 

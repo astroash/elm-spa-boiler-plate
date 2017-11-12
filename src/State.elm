@@ -1,6 +1,20 @@
-module Update exposing (..)
+module State exposing (..)
 
 import Types exposing (..)
+
+
+-- MODEL
+
+
+model : Model
+model =
+    { route = HomeRoute
+    , userInput = ""
+    }
+
+
+
+--UPDATE
 
 
 getPage : String -> Route

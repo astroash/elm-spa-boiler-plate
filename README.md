@@ -24,14 +24,14 @@ server`
 ## Routing
 Routing is done via a #url to avoid reloading the page and loosing model's state. There are workarounds for this, but this a simple solution that requires minimal code (_check resources below for alternatives_). The router works by using the `Navigation` package which gives us access to the url. Our app checks the current url address, updates this route in the `modal`, then renders the page according to the `modal.route`.
 
-All routing takes place in the ```Update.elm``` & ```View.elm``` files:
+All routing takes place in the ```State.elm``` & ```View.elm``` files:
 - ```getPage``` in ```Update.elm``` acts as a virtual router, which gets the current url and sets it in model
 - the ```case``` statement in ```View.elm``` acts as a handler which serves the correct ```Html Msg```
 
 To add a new route you need to:
 1. Add a your route as a msg type in Route in `Type.elm`
 2. Create and export a ```Html Msg``` for the new page and place it in a separate file in ```Routes/```
-3. Add a ```case``` for the route in ```getPage```
+3. Add a ```case``` for the route under ```getPage``` in ```State.elm```
 4. Serve the file by adding a ```case``` for the imported```Html Msg``` in ```view ```
 
 ## Multiplicity
