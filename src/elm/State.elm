@@ -1,10 +1,24 @@
-module Update exposing (..)
+module State exposing (..)
 
 import Types exposing (..)
 
 
-getPage : String -> Route
-getPage hash =
+-- MODEL
+
+
+initModel : Model
+initModel =
+    { route = HomeRoute
+    , userInput = ""
+    }
+
+
+
+--UPDATE
+
+
+getRoute : String -> Route
+getRoute hash =
     case hash of
         "#home" ->
             HomeRoute
@@ -26,4 +40,4 @@ update msg model =
             ( { model | userInput = newInput }, Cmd.none )
 
         UrlChange location ->
-            { model | route = (getPage location.hash) } ! [ Cmd.none ]
+            ( { model | route = (getRoute location.hash) }, Cmd.none )
