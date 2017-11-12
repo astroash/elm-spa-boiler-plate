@@ -6,8 +6,8 @@ import Types exposing (..)
 -- MODEL
 
 
-model : Model
-model =
+initModel : Model
+initModel =
     { route = HomeRoute
     , userInput = ""
     }
