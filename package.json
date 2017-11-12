@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "elm-live src/Main.elm --output=public/elm.js --dir=public --open --debug --pushstate",
-    "build": "elm-make src/Main.elm --output=public/elm.js"
+    "build": "npm run css-build; elm-make src/Main.elm --output=public/elm.js",
+    "css-watch": "postcss ./src/css/index.css --output ./public/style.min.css --watch --config ./postcss.config.js",
+    "css-build": "postcss ./src/css/index.css --output ./public/style.min.css --config ./postcss.config.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,15 @@
   },
   "homepage": "https://github.com/astroash/elm-spa-boiler-plate#readme",
   "devDependencies": {
-    "elm-live": "^2.7.5"
+    "elm-live": "^2.7.5",
+    "autoprefixer": "^7.1.6",
+    "postcss-clean": "^1.1.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-custom-properties": "^6.2.0",
+    "postcss-import": "^11.0.0"
+  },
+  "dependencies": {
+    "tachyons-custom": "^4.9.0"
   }
 }
