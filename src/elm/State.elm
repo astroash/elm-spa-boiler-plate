@@ -40,4 +40,4 @@ update msg model =
             ( { model | userInput = newInput }, Cmd.none )
 
         UrlChange location ->
-            { model | route = (getRoute location.hash) } ! [ Cmd.none ]
+            ( { model | route = (getRoute location.hash) }, Cmd.none )
