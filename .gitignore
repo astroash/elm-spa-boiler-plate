@@ -7,3 +7,6 @@ elm.js
 
 
 # generated css
+style.min.css
+
+node_modules
